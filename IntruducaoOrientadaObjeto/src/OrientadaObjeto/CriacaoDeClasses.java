@@ -1,0 +1,38 @@
+package OrientadaObjeto;
+
+import java.util.Scanner;
+
+import Entidade.Triangulo;
+
+public class CriacaoDeClasses {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		Triangulo x, y;
+
+		x = new Triangulo();
+		y = new Triangulo();
+
+		System.out.println("digite o lados o triango X");
+		x.a = sc.nextDouble();
+		x.b = sc.nextDouble();
+		x.c = sc.nextDouble();
+
+		System.out.println("entre com os lados do triangulo Y");
+		y.a = sc.nextDouble();
+		y.b = sc.nextDouble();
+		y.c = sc.nextDouble();
+
+		double areaX = x.area();
+		double areaY = y.area();
+
+		if (areaX > areaY) {
+			System.out.println("X = " + areaX);
+		} else {
+			System.out.println("Y = " + areaY);
+		}
+	}
+
+}
